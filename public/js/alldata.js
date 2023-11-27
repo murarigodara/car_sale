@@ -15,11 +15,18 @@ function sortData(){
         
         let columnIndex=headings.indexOf(String(key));
         const rows = Array.from(tbody.getElementsByTagName('tr'));
+       
         rows.sort((a, b) => {
-            console.log(a.getElementsByTagName('td')[columnIndex].innerText);
-            const aValue = a.getElementsByTagName('td')[columnIndex].innerText;
+           
+            let aValue = a.getElementsByTagName('td')[columnIndex].innerText;
             
-            const bValue = b.getElementsByTagName('td')[columnIndex].innerText;
+            let bValue = b.getElementsByTagName('td')[columnIndex].innerText;
+            
+            if(!Number.isNaN(Number(aValue))&& !Number.isNaN(Number(bValue) )){
+              console.log("number is hit")
+              return parseFloat(aValue)-parseFloat(bValue);
+            }
+
             return aValue.localeCompare(bValue);
           });
           // Remove existing rows from the table
