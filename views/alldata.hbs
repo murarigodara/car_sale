@@ -1,0 +1,76 @@
+<div class="sortby">
+<label for="sortField">Sort by:</label>
+<select id="sortField" >
+  <option value="" disabled selected>Select Field</option>
+  <option value="InvoiceNo">InvoiceNo</option>
+  <option value="Manufacturer">Manufacturer</option>
+  <option value="class">class</option>
+  <option value="Sales_in_thousands">Sales_in_thousands</option>
+  <option value="__year_resale_value">__year_resale_value</option>
+  <option value="Vehicle_type">Vehicle_type</option>
+  <option value="Price_in_thousands">Price_in_thousands</option>
+  <option value="Engine_size">Engine_size</option>
+  <option value="Horsepower">Horsepower</option>
+  <option value="Wheelbase">Wheelbase</option>
+  <option value="Width">Width</option>
+  <option value="Length">Length</option>
+  <option value="Curb_weight">Curb_weight</option>
+  <option value="Curb_weight">Curb_weight</option>
+  <option value="Fuel_capacity">Fuel_capacity</option>
+  <option value="Curb_weight">Curb_weight</option>
+  <option value="Fuel_efficiency">Fuel_efficiency</option>
+  <option value="Latest_Launch">Latest_Launch</option>
+  <option value="Power_perf_factor">Power_perf_factor</option>
+</select>
+</div>
+
+
+<table border="1" id="dataTable" class="data-table">
+  <thead><tr class="heading-row">
+      <th>InvoiceNo</th>
+      <th>image</th>
+      <th>Manufacturer</th>
+      <th>class</th>
+      <th>Sales_in_thousands</th>
+      <th>__year_resale_value</th>
+      <th>Vehicle_type</th>
+      <th>Price_in_thousands</th>
+      <th>Engine_size</th>
+      <th>Horsepower</th>
+      <th>Wheelbase</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Curb_weight</th>
+      <th>Fuel_capacity</th>
+      <th>Fuel_efficiency</th>
+      <th>Latest_Launch</th>
+      <th>Power_perf_factor</th>
+    </tr></thead>
+  <tbody>
+    {{#each result}}
+      <tr class="data-row">
+        <td>{{InvoiceNo}}</td>
+        <td><img src="{{image}}" alt="Not Avaiable" /></td>
+        <td>{{Manufacturer}}</td>
+        <td>{{class}}</td>
+        <td>{{Sales_in_thousands}}</td>
+        <td>{{__year_resale_value}}</td>
+        <td>{{Vehicle_type}}</td>
+        <td>{{Price_in_thousands}}</td>
+        <td>{{Engine_size}}</td>
+        <td>{{Horsepower}}</td>
+        <td>{{Wheelbase}}</td>
+        <td>{{Width}}</td>
+        <td>{{Length}}</td>
+        <td>{{Curb_weight}}</td>
+        <td>{{Fuel_capacity}}</td>
+        <td>{{Fuel_efficiency}}</td>
+        <td>{{Latest_Launch}}</td>
+        <td>{{Power_perf_factor}}</td>
+
+      </tr>
+    {{/each}}
+
+  </tbody>
+
+</table>
